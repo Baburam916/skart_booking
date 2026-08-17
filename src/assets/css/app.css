@@ -1,0 +1,577 @@
+/*
+ |--------------------------------------------------------------------------
+ | TailwindCSS Directives
+ |--------------------------------------------------------------------------
+ |
+ | Import TailwindCSS directives and swipe out at build-time with all of
+ | the styles it generates based on your configured design system.
+ |
+ | Please check this link for more details:
+ | https://tailwindcss.com/docs/installation#include-tailwind-in-your-css
+ |
+ */
+@import "./_tailwind.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | Fonts
+   |--------------------------------------------------------------------------
+   |
+   | Import all fonts used in the template, the font configuration can be
+   | seen in "tailwind.config.js".
+   |
+   | Please check this link for more details:
+   | https://tailwindcss.com/docs/theme
+   |
+   */
+@import "./_roboto.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | 3rd Party Libraries
+   |--------------------------------------------------------------------------
+   |
+   | Import 3rd party library CSS files.
+   |
+   */
+@import "simplebar/src/simplebar.css";
+@import "dropzone/dist/dropzone.css";
+@import "tabulator-tables/dist/css/tabulator.css";
+@import "tom-select/dist/css/tom-select.css";
+@import "zoom-vanilla.js/dist/zoom.css";
+@import "toastify-js/src/toastify.css";
+@import "highlight.js/styles/github.css";
+@import "tippy.js/dist/tippy.css";
+@import "tippy.js/themes/light.css";
+@import "tippy.js/dist/svg-arrow.css";
+@import "tippy.js/animations/shift-away.css";
+@import "tiny-slider/dist/tiny-slider.css";
+@import "leaflet/dist/leaflet.css";
+@import "leaflet.markercluster/dist/MarkerCluster.css";
+
+/*
+   |--------------------------------------------------------------------------
+   | Components
+   |--------------------------------------------------------------------------
+   |
+   | Import CSS components.
+   |
+   */
+@import "./components/_global.css";
+@import "./components/_intro.css";
+@import "./components/_zoom-in.css";
+@import "./components/_image-fit.css";
+@import "./components/_typing-dots.css";
+@import "./components/_scrollbar-hidden.css";
+@import "./components/_box.css";
+@import "./components/_tiny-slider.css";
+@import "./components/_tippy.css";
+@import "./components/_toastify.css";
+@import "./components/_zoom-vanilla.css";
+@import "./components/_tom-select.css";
+@import "./components/_ckeditor.css";
+@import "./components/_litepicker.css";
+@import "./components/_full-calendar.css";
+@import "./components/_tabulator.css";
+
+html body {
+  overflow-y: initial !important;
+}
+
+nav::-webkit-scrollbar {
+  visibility: hidden;
+  width: 0px;
+  display: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/*******START BULK BOOKING*********************/
+
+.Booking_scooteranimate {
+	background: url(/src/assets/images/bgscooter_booking.png);
+	overflow: hidden;
+	animation: background-scrolll 20s linear infinite;
+	background-repeat: repeat-x;
+	background-position: 370px 0;
+	width: 100%;
+	background-size: 472px 71px;
+}
+@keyframes background-scrolll {
+  from {
+    background-position-x: -500%;
+  }
+}
+
+
+.bookingPlan {
+  position: absolute;
+  top: 50px;
+  right: -150px;
+  opacity: .9;
+   animation: cloud 10s linear 0s infinite reverse;
+  z-index: 99;
+}
+@keyframes light {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+@keyframes cloud {
+  from {right:-300px;}
+  to {right: 80%;}
+}
+
+
+/*******END BULK BOOKING*********************/
+/**************START book shipment ****************************/
+
+.bookshopmentLeft li {
+  width: -moz-available;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  padding: 2px 2px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bookshopmentLeft li::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 99999px;
+  height: 99999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /* background-image: conic-gradient(rgba(0,0,0,0), #d9ad03, rgba(255, 228, 11, 0) 25%); */
+  animation: rotate 4s linear infinite;
+}
+
+.bookshopmentLeft li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 2px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  /* background: #f1fdf2; */
+  border-radius: 10px;
+}
+
+@keyframes rotate {
+  100% {
+    transform: translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.bookshopmentLeft .bactive {
+  background: #ffda95 !important;
+  box-shadow: 0 0 8px #f2ddb4;
+}
+
+.bookshopmentLeft .bactive button i {
+  background: #fff9ee !important;
+}
+.bookshopmentLeft .bactive button i img {
+  filter: brightness(1.2) hue-rotate(345deg);
+}
+
+.bookshopmentLeft .bactive button {
+  background: #fff0d3 !important;
+}
+
+.bookshopmentLeft .bactive::before {
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #ffaa01,
+    rgba(255, 228, 11, 0) 25%
+  ) !important;
+}
+
+.bookshopmentLeft li:hover button {
+  background: #fff0d3 !important;
+}
+.bookshopmentLeft li:hover p {
+  color: #d79617 !important;
+}
+
+.bookshopmentLeft li:hover {
+  background: #ecd099 !important;
+}
+.bookshopmentLeft li:hover i {
+  background: #fff9ee !important;
+}
+.bookshopmentLeft li:hover i img {
+  filter: brightness(1.2) hue-rotate(345deg);
+}
+
+.newSelected .active label figure {
+  background: #fff;
+  border-color: #f7d795;
+}
+.newSelected figure.shipment_active i {
+  background: #ffc248;
+}
+.newSelected figure.shipment_active i img {
+  filter: brightness(22);
+}
+
+.newSelected li:hover label figure {
+  background: #fff;
+  border-color: #f7d795;
+}
+.newSelected li:hover label figure i {
+  background: #eab445;
+}
+.newSelected li:hover label figure i img {
+  filter: brightness(22);
+}
+
+.bookshopmentLeft .bactive button p {
+  color: #ffc248 !important;
+}
+
+.newSelected figure.shipment_active::before {
+  background-image: conic-gradient(
+    rgba(211, 151, 7, 0.4),
+    #ffaa01,
+    rgba(232, 209, 28, 0) 25%
+  ) !important;
+}
+
+.newSelected li figure::before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  position: absolute;
+  width: 99999px;
+  height: 99999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*	background-image: conic-gradient(rgba(211, 151, 7, 0.4), #a07803, rgba(232, 209, 28, 0) 25%) !important;*/
+  animation: rotate 4s linear infinite;
+}
+
+.newSelected li figure::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 3px;
+  top: 2px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  /* background: #f1fdf2; */
+  border-radius: 10px;
+}
+
+.newSelected figure {
+  width: -moz-available;
+  overflow: hidden;
+  z-index: 0;
+  border-radius: 50%;
+  position: relative;
+  background: #eeeded;
+  padding: 2px 2px;
+  width: 36px;
+  height: 36px;
+}
+
+.newSelected .active label span {
+  color: #ffc248 !important;
+}
+
+.newSelected li:hover label span {
+  color: #ffc248 !important;
+}
+
+.arrow {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+.arrow span {
+  display: block;
+  width: 0.9vw;
+  height: 0.9vw;
+  border-top: 1px solid #ffc248;
+  border-left: 1px solid #ffc248;
+  transform: rotate(45deg);
+  margin: -12px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.6s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-10px, -10px);
+  }
+}
+.bookshopmentLeft li button {
+  justify-content: flex-start !important;
+  border: none;
+}
+
+.bookshipInner label {
+  margin: 0px !important;
+}
+.newSelected span {
+  display: inline-block;
+}
+
+/**************END book shipment ****************************/
+
+/**** START Preview Modal  *****/
+
+@keyframes pulse-custom {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+}
+@layer utilities {
+  .animate-pulse-custom {
+    animation: pulse-custom 2s infinite;
+  }
+}
+
+.SRAnimation {
+  display: block;
+  height: auto;
+  animation: srrunn 4s infinite linear;
+  animation-name: srrunn;
+  width: 40px;
+  z-index: 2;
+  position: absolute;
+}
+
+@keyframes srrunn {
+  0% {
+    left: -6%;
+    top: -21px;
+  }
+  100% {
+    left: 90%;
+    top: -21px;
+  }
+}
+
+.SRAnimationTop {
+  display: block;
+  height: auto;
+  animation: srrunTop 4s infinite linear;
+  animation-name: srrunTop;
+  width: 40px;
+  z-index: 2;
+  position: absolute;
+}
+
+@keyframes srrunTop {
+  0% {
+    left: -26%;
+    top: -12px;
+  }
+  100% {
+    left: 110%;
+    top: -12px;
+  }
+}
+
+.prePadding {
+  padding: 12px 6px 12px 12px !important;
+}
+
+/**** END Preview Modal  *****/
+
+.newSelected .active label {
+  border-color: #f5d391;
+  background: #fffaef;
+}
+.newSelected .active .newSelectedCheck {
+  background: #fff5dd;
+}
+.newSelected .active .newSelectedCheck i {
+  background: #fff7e5;
+  border-color: #e0ae3a;
+}
+.newSelected .active .newSelectedCheck i svg {
+  display: block;
+  color: #db9d0e;
+}
+.newSelected .active .iconShip {
+  filter: hue-rotate(113deg) invert(7888) sepia(9) saturate(3);
+}
+
+/**** END Preview Modal  *****/
+
+.newSelected li:hover label {
+  border-color: #f5d391;
+  background: #fffaef;
+}
+.newSelected li:hover .newSelectedCheck {
+  background: #fff5dd;
+}
+.newSelected li:hover .newSelectedCheck i {
+  background: #fff7e5;
+  border-color: #e0ae3a;
+}
+.newSelected li:hover.newSelectedCheck i svg {
+  display: block;
+  color: #db9d0e;
+}
+.newSelected li:hover .iconShip {
+  filter: hue-rotate(113deg) invert(7888) sepia(9) saturate(3);
+}
+
+/**** START rate calculator   *****/
+
+.calcualtorTab li {
+  display: inline-block;
+}
+
+.calcualtorTab [data-headlessui-state="selected"] button {
+  background: linear-gradient(90deg, #f9c60d, #efb847, #f0cf1d, #efb847);
+  background-size: 700% 700%;
+  animation: gradient-animate 8s linear infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes gradient-animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.RCalcuatorMain .ts-control,
+.rateinput {
+  padding-left: 40px !important;
+  font-size: 13px !important;
+}
+
+.RCalcuatorMain .tom-select.ts-wrapper,
+.RCalcuatorMain .tom-select.plugin-dropdown_input.focus.dropdown-active {
+  background-position: center right 0.1rem;
+}
+.rateBottomclick td,
+.rateBottomclick th {
+  padding: 5px 11px !important;
+}
+
+/**** END rate calculator   *****/
+
+@media (max-width: 1540px) {
+  .scrollvd {
+    height: 390px;
+  }
+}
+
+@media (max-width: 991px) {
+  .senderRecievermODAL {
+    width: 96% !important;
+  }
+}
+
+
+
+/******START Spot Pricing Enquiry**********/
+
+.sportPlane{top: -17px !important;}
+
+
+.sport_scooteranimate {
+	background: url(/src/assets/images/bgscooter_booking.png);
+	overflow: hidden;
+	animation: background-scrollll 30s linear infinite;
+	background-repeat: repeat-x;
+	background-position: 370px 0;
+	width: 100%;
+	background-size: 472px 71px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	opacity: 0.9;
+}
+
+
+
+.sportPlane {
+
+  z-index: 1 !important;
+}
+@keyframes background-scrollll {
+  from {
+    background-position-x: -100%;
+  }
+}
+.newServiceTruck {
+	width: 100%;
+	position: absolute;
+	bottom: -8px;
+}
+    .truckAnimation {
+	right: 30%;
+	bottom: 0;
+	-webkit-animation: speed 10s linear infinite;
+	animation: speed 14s linear infinite;
+	width: 38px;
+}
+
+@keyframes speed {
+    0% {
+        transform: translateX(-2vw);
+        opacity: 0;
+    }
+    8% {
+        opacity: 1;
+    }
+    88% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(30vw);
+        opacity: 0;
+    }
+}
+
+/******END Spot Pricing Enquiry*********/
