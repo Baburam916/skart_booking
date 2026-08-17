@@ -682,22 +682,22 @@ const main = () => {
     <>
       {!isDirectCust && (
         <AlertComponent
-          variant={(isKavach || booking?.is_import == 2) ? "soft-success" : "soft-warning"}
-          className="flex items-center mb-2 p-2 text-lg font-bold z-[1] relative"
+          variant={isKavach ? "soft-success" : "soft-warning"}
+          className="lg:flex block items-center mb-2 p-2 text-lg font-bold z-[1] relative"
         >
           <Lucide
-            icon={(isKavach || booking?.is_import == 2) ? "ShieldCheck" : "ShieldAlert"}
+            icon={isKavach ? "ShieldCheck" : "ShieldAlert"}
             className="w-6 h-6 mr-2"
           />{" "}
-          {(isKavach || booking?.is_import == 2)
+          {isKavach
             ? "This booking is covered under Kavach."
             : "This booking is not covered under kavach. Please click on activate to save from any surprise additional charges."}
-          {(!isKavach && booking?.is_import != 2) && (
-            <Link to="/franchisee/activate_kavach">
+          {!isKavach && (
+            <Link to="/franchisee/activate_kavach" className="block">
               <Button
                 rounded
                 size="sm"
-                className="text-white bg-green-500 ml-4 text-md px-4"
+                className="text-white bg-green-500 lg:ml-4 text-md px-4"
               >
                 Activate
               </Button>
@@ -705,7 +705,7 @@ const main = () => {
           )}
         </AlertComponent>
       )}
-      <div className="mt-3  w-full py-8  px-5 bg-white rounded-lg shadow-lg">
+      <div className="mt-3  w-full  py-2  px-2  lg:py-8  lg:px-5 bg-white rounded-lg shadow-lg">
         <div className="w-full lg:w-[810px] xl:w-[900px] m-auto ">
           <div className="grid grid-cols-12 w-full gap-5">
             <div className="col-span-12 lg:col-span-3">
@@ -931,18 +931,18 @@ const main = () => {
                             content={
                               shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 2
+                                  item2?.booking_shipment_type_id == 2,
                               )?.info ||
                               shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 1
+                                  item2?.booking_shipment_type_id == 1,
                               )?.info ||
                               ""
                             }
                             options={{
                               placement: shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 2
+                                  item2?.booking_shipment_type_id == 2,
                               )?.info
                                 ? "top"
                                 : shipmentTypes?.find(
@@ -1032,18 +1032,18 @@ const main = () => {
                             content={
                               shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 4
+                                  item2?.booking_shipment_type_id == 4,
                               )?.info ||
                               shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 5
+                                  item2?.booking_shipment_type_id == 5,
                               )?.info ||
                               ""
                             }
                             options={{
                               placement: shipmentTypes?.find(
                                 (item2: any) =>
-                                  item2?.booking_shipment_type_id == 4
+                                  item2?.booking_shipment_type_id == 4,
                               )?.info
                                 ? "top"
                                 : shipmentTypes?.find(
@@ -1455,8 +1455,6 @@ const main = () => {
                                       border={
                                         error?.origin_pincode ? true : false
                                       }
-                                      enableZipcodeLookup={true}
-                                      countryName={booking?.origin_country}
                                     />
                                   </div>
                                 )}
@@ -1487,14 +1485,6 @@ const main = () => {
                                       zIndex={20}
                                       forwhat="city"
                                       border={error?.origin_city ? true : false}
-                                      enableZipcodeLookup={true}
-                                      lookupType="city"
-                                      countryName={booking?.origin_country}
-                                      lookupZipcode={
-                                        booking?.pincode_available == 1
-                                          ? booking?.origin_pincode
-                                          : "0000"
-                                      }
                                     />
                                   </div>
                                 )}
@@ -1669,8 +1659,6 @@ const main = () => {
                                               ? true
                                               : false
                                           }
-                                          enableZipcodeLookup={true}
-                                          countryName={booking?.destination_country}
                                         />
                                       </div>
                                     )}
@@ -1704,14 +1692,6 @@ const main = () => {
                                           openhandedfun={funtohandle}
                                           forwhat="city"
                                           border={error?.city ? true : false}
-                                          enableZipcodeLookup={true}
-                                          lookupType="city"
-                                          countryName={booking?.destination_country}
-                                          lookupZipcode={
-                                            booking?.pincode_available == 1
-                                              ? booking?.destination_pincode
-                                              : "0000"
-                                          }
                                         />
                                       </div>
                                     )}

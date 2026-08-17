@@ -55,12 +55,12 @@ setPagination((pre:any)=>({...pre,page:e}))
 
 return (
   <div title="My Customers - sKart">
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-2 lg:p-4">
       <h1 className=" text-xl font-bold text-[#2c3e50] mb-6 mt-6 uppercase">
         Affiliate Customers
       </h1>
 
-      <div className="bg-white shadow rounded p-5">
+      <div className="bg-white shadow rounded p-2 lg:p-5">
         <div className="flex justify-between items-center mb-5">
           <h2 className="text-lg font-semibold">
             Total Customers: {pagination.total}

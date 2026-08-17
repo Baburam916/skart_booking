@@ -257,8 +257,8 @@ const Index: React.FC = () => {
   }, [page]);
 
   return (
-    <div className="w-full max-w-8xl mx-auto mt-8 mb-16 p-8 md:p-10 lg:p-12 bg-white rounded-lg shadow-lg z-[0] relative">
-      <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  items-end gap-8 w-full">
+    <div className="w-full max-w-8xl mx-auto p-3 px-2 lg:p-6 lg:px-10 mt-2  lg:mt-8  bg-white rounded-lg shadow-lg z-[0] relative">
+      <div className="grid  sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  items-end gap-2 lg:gap-8 w-full">
         <div className="w-full">
           <h1 className="text-2xl font-bold ">Booking Summary </h1>
         </div>

@@ -116,8 +116,8 @@ const {showAlert}=useAlert()
 
 return (
   <div title="Bank Details - sKart" className="bg-gray-100 text-gray-800">
-    <div className=" mx-auto px-5">
-      <div className="flex justify-between items-center mb-6 mt-4">
+    <div className=" mx-auto px-2 lg:px-5">
+      <div className="block lg:flex justify-between items-center mb-6 mt-4">
         <h1 className="text-3xl font-bold mb-2 ">Bank Details</h1>
 
         <Button

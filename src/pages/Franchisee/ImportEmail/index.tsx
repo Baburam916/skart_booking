@@ -92,10 +92,10 @@ const main = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-8xl mx-auto mt-8 p-8 md:p-10 lg:p-12 mb-16 bg-white rounded-lg shadow-lg z-[0] relative">
+    <div className="w-full max-w-8xl mx-auto mt-8  p-3 px-2 lg:p-6 lg:px-10 mb-16 bg-white rounded-lg shadow-lg z-[0] relative">
       <div className="flex items-center gap-3 mb-1">
         <Mail className="w-6 h-6 text-mustard stroke-2" />
-        <h1 className="text-2xl font-bold">Import Email</h1>
+        <h1 className="text-2xl font-bold">Import Email khkhg</h1>
       </div>
       <p className="text-sm text-gray-400 mb-4 ml-9">
         Configure which parties receive email notifications for shipments.
@@ -114,7 +114,7 @@ const main = () => {
                 <label
                   key={id}
                   htmlFor={id}
-                  className={`cursor-pointer rounded-xl border-2 p-5 transition-all duration-200 flex gap-4 items-start ${
+                  className={`cursor-pointer rounded-xl border-2 p-2 lg:p-5 transition-all duration-200 flex gap-4 items-start ${
                     checked
                       ? "border-mustard bg-amber-50 shadow-md"
                       : "border-gray-200 bg-gray-50 hover:border-gray-300"

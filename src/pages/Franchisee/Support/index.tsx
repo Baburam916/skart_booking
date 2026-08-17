@@ -4,9 +4,9 @@ import React, { useState } from "react";
 const main = () => {
   return (
     <>
-      <div className="w-full h-[80vh] flex justify-center items-center">
-        <div className="container px-4 md:px-6">
-          <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-bold mb-16 sm:mb-20 bg-gradient-to-r from-orange-400 to-yellow-500 text-transparent bg-clip-text">
+      <div className="w-full h-auto mt-4 lg:mt-0 lg:h-[80vh] flex justify-center items-center">
+        <div className="container px-2 md:px-6">
+          <h2 className="text-center text-[20px] sm:text-5xl md:text-6xl font-bold mb-5 sm:mb-20 bg-gradient-to-r from-orange-400 to-yellow-500 text-transparent bg-clip-text">
             Help & Support
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 sm:gap-12 max-w-4xl mx-auto">

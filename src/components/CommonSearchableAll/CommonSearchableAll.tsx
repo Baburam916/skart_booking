@@ -2,8 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import { FormInput } from "../../base-components/Form";
 import { commongetrequest } from "../../AllServices/services";
 import { useDebounce } from "../../utils";
-import ZipcodeLookupModal from "./ZipcodeLookupModal";
-
 const CommonSearchableAll = (props: any) => {
   const {
     apiEndpoint,
@@ -31,10 +29,6 @@ const CommonSearchableAll = (props: any) => {
     className,
     refValue,
     localData,
-    enableZipcodeLookup,
-    countryName,
-    lookupType = "zipcode",
-    lookupZipcode,
   } = props;
   const [query, setQuery] = useState(selecteddata[comingselectedname] || "");
   const [isUserTyping, setIsUserTyping] = useState(id ? false : true); // Track whether the user is typing
@@ -45,7 +39,6 @@ const CommonSearchableAll = (props: any) => {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [zipcodeLookupOpen, setZipcodeLookupOpen] = useState(false);
   // Create a reference for the component container
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -110,28 +103,7 @@ const CommonSearchableAll = (props: any) => {
     setSelecteddata(item);
     setShowSuggestions(false);
   };
-  const handleZipcodeLookupApply = (result: { zipcode?: string; city?: string }) => {
-    const primaryValue =
-      lookupType === "city" ? result?.city || "" : result?.zipcode || "";
-    const item: any = { [comingselectedname]: primaryValue };
-    if (comingselectedid) {
-      item[comingselectedid] =
-        lookupType === "city" ? primaryValue : result?.city || "";
-    }
-    if (addcomingname2) item[addcomingname2] = result?.city || "";
-    if (addcomingname3) item[addcomingname3] = "";
 
-    setIsUserTyping(false);
-    setQuery(item[comingselectedname]);
-    setSelecteddata(item);
-    if (forwhat) {
-      fun1(item, forwhat);
-    } else {
-      fun1(item);
-    }
-    setShowSuggestions(false);
-    setZipcodeLookupOpen(false);
-  };
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setIsUserTyping(true);
@@ -197,8 +169,8 @@ const CommonSearchableAll = (props: any) => {
                 onClick={() => handleSelect(item)}
               >
                 {`${item[comingselectedname]}${addcomingname2 && item[addcomingname2]
-                    ? ` - ${item[addcomingname2]}`
-                    : ""
+                  ? ` - ${item[addcomingname2]}`
+                  : ""
                   }${addcomingname3 && item[addcomingname3]
                     ? `, ${item[addcomingname3]}`
                     : ""
@@ -206,43 +178,9 @@ const CommonSearchableAll = (props: any) => {
               </li>
             ))
           ) : (
-            <li className="p-2 text-gray-500 flex items-center justify-between gap-2">
-              <span>No results found</span>
-              {enableZipcodeLookup && (
-                <button
-                  type="button"
-                  onMouseDown={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setZipcodeLookupOpen(true);
-                  }}
-                  className="text-mustard font-semibold text-xs whitespace-nowrap shrink-0 hover:underline"
-                >
-                  {lookupType === "city" ? "City Lookup" : "Zipcode Lookup"}
-                </button>
-              )}
-            </li>
+            <li className="p-2 text-gray-500">No results found</li>
           )}
         </ul>
-      )}
-      {enableZipcodeLookup && (
-        <ZipcodeLookupModal
-          open={zipcodeLookupOpen}
-          onClose={() => setZipcodeLookupOpen(false)}
-          countryName={countryName}
-          mode={lookupType}
-          zipcodeValue={
-            lookupZipcode !== undefined
-              ? lookupZipcode
-              : lookupType !== "city"
-                ? selecteddata?.[comingselectedname]
-                : undefined
-          }
-          cityValue={
-            lookupType === "city" ? selecteddata?.[comingselectedname] : undefined
-          }
-          onApply={handleZipcodeLookupApply}
-        />
       )}
     </div>
   );

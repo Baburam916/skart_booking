@@ -199,16 +199,16 @@ const Index: React.FC = () => {
       {showForm == 1 ? (
         <BulkBookingForm setShowForm={setShowForm} getListingData={getData} />
       ) : showForm == 2 ? (
-        <div className="w-full max-w-8xl p-6 px-10 bg-white rounded-lg shadow-lg  mt-8 mb-16  z-[0] relative">
-          <div className="w-full grid grid-cols-1 md:grid-cols-4 items-end gap-8">
+        <div className="w-full max-w-8xl p-3 px-2 lg:p-6 lg:px-10 mt-2  lg:mt-8  bg-white rounded-lg shadow-lg   mb-16  z-[0] relative">
+          <div className="w-full block lg:flex justify-between   gap-2 lg:gap-8">
             <h1 className="text-2xl font-bold text-left lg:whitespace-nowrap">
               Bulk Booking List
             </h1>
 
-            <div className="flex justify-end w-full md:w-auto">
+            <div className="block lg:flex justify-end w-full md:w-auto gap-2">
               {selectedBooking?.length > 0 && (
                 <Button
-                  className="bg-mustard text-white  w-full md:w-auto"
+                  className="bg-mustard text-white   md:w-auto mr-1"
                   onClick={() => triggerPending({ single: false })}
                   disabled={triggerSpinner?.status == true}
                 >
@@ -217,16 +217,17 @@ const Index: React.FC = () => {
                     <LoadingIcon
                       icon="puff"
                       color="white"
-                      className="w-5 h-5 ml-2 stroke-2.5 text-white"
+                      className="w-5 h-5 ml-2 mb-1 lg:mb-0 stroke-2.5 text-white"
                     />
                   )}
                 </Button>
               )}
-            </div>
+  
 
-            <div className="flex justify-end  w-full md:w-auto">
+
+  
               <Button
-                className="bg-blue-500 hover:bg-blue-600 text-white  w-full md:w-auto"
+                className="bg-blue-500 hover:bg-blue-600 text-white mb-1 lg:mb-0 mr-1   md:w-auto"
                 onClick={() => {
                   setShowForm(1);
                   navigate("/franchisee/upload_bulk_booking");
@@ -238,10 +239,9 @@ const Index: React.FC = () => {
                   className="w-4 h-4 stroke-2.5 text-white ml-2"
                 />
               </Button>
-            </div>
-            <div className="flex justify-end  w-full md:w-auto">
+ 
               <Button
-                className="bg-green-500 hover:bg-green-600 text-white  w-full md:w-auto"
+                className="bg-green-500 hover:bg-green-600 text-white mb-1 lg:mb-0  md:w-auto"
                 onClick={() => getData(true)}
                 disabled={downloadSpinner}
               >

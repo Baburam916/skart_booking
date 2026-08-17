@@ -304,7 +304,7 @@ function Main() {
         {/* BEGIN: Content */}
         <div
           style={{ borderRadius: "30px" }}
-          className=" overflow-y-auto min-w-0 min-h-[94vh] h-[94vh] scrollbar-hide pb-4 flex-1 bg-slate-100 dark:bg-darkmode-700 px-4 md:px-[22px] max-w-full md:max-w-auto before:content-[''] before:w-full before:block boxinner"
+          className=" overflow-y-auto min-w-0 min-h-[94vh] h-[94vh] scrollbar-hide pb-4 flex-1 bg-slate-100 dark:bg-darkmode-700 px-2 md:px-[22px] max-w-full md:max-w-auto before:content-[''] before:w-full before:block boxinner"
         >
           <TopBar />
           <Outlet />

@@ -166,8 +166,8 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-8xl mx-auto mt-8 mb-16 p-8 md:p-10 lg:p-12 bg-white rounded-lg shadow-lg z-[0] relative">
-      <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  items-end gap-8 w-full">
+    <div className="w-full max-w-8xl mx-auto p-3 px-2 lg:p-6 lg:px-10 mt-2  lg:mt-8  bg-white rounded-lg shadow-lg z-[0] relative">
+      <div className="grid  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  xl:grid-cols-5  items-end gap-2 lg:gap-8 w-full">
         <div className="w-full">
           <h1 className="text-2xl font-bold ">Customer Report </h1>
         </div>
@@ -199,8 +199,8 @@ const Index: React.FC = () => {
         </div>
         <div className="flex w-full items-end">
           <Button
-            rounded
-            className="w-full  bg-mustard text-white"
+           
+            className="w-full  bg-mustard text-white  rounded-md"
             disabled={isLoading || (!fromDate && !toDate)}
             onClick={getData}
           >

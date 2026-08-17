@@ -95,7 +95,7 @@ export default function AffiliateCommissions() {
         </h2>
 
         <div className="flex justify-center w-full my-4 border-t border-slate-200 dark:border-darkmode-400"></div>
-        <div className="bg-white shadow rounded-lg p-6">
+        <div className="bg-white shadow rounded-lg p-2 lg:p-6">
           {/* Filters */}
           <div className="grid gap-4 mb-5 grid-cols-1 sm:grid-cols-3 md:grid-cols-4">
             <div>

@@ -302,7 +302,7 @@ const WalletRecharge: React.FC<WalletRechargeProps> = ({
   }, []);
 
   return (
-    <div className="max-w-2xl mx-auto mt-8 p-6 pt-4 bg-white rounded-lg shadow-md">
+    <div className="max-w-2xl mx-auto mt-8 p-2 lg:p-6 pt-4 bg-white rounded-lg shadow-md">
       {!isDirectCust && (
         <>
           <h1 className="text-2xl font-semibold ">Recharge Wallet</h1>

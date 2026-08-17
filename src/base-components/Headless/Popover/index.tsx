@@ -77,7 +77,7 @@ Popover.Panel = ({
           placement == "right-start" && "left-[100%] translate-y-[-50%]",
           placement == "right" && "left-[100%] top-[50%] translate-y-[-50%]",
           placement == "right-end" && "left-[100%] bottom-0",
-          placement == "bottom-end" && "top-[100%] right-0",
+          placement == "bottom-end" && "top-[100%] right-[-40px]",
           placement == "bottom" && "top-[100%] left-[50%] translate-x-[-50%]",
           placement == "bottom-start" && "top-[100%] left-0",
           placement == "left-start" && "right-[100%] translate-y-[-50%]",

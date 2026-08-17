@@ -110,7 +110,7 @@ const main = () => {
   }, [page, debouncedSearch]);
 
   return (
-    <div className="w-full max-w-8xl p-6 px-10  bg-white rounded-lg shadow-lg  mt-8 mb-16  z-[0] relative">
+    <div className="w-full max-w-8xl p-3 px-2 lg:p-6 lg:px-10 mt-2  lg:mt-8  bg-white rounded-lg shadow-lg   mb-16  z-[0] relative">
       <div className="grid  sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2  xl:grid-cols-2  items-end gap-8 w-full">
         <div className="w-full">
           <h1 className="text-2xl font-bold text-left whitespace-nowrap">

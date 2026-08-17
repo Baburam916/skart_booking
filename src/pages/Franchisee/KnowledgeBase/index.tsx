@@ -23,10 +23,10 @@ const main = () => {
 
   return (
     <>
-      <div className="w-full max-w-6xl p-6 px-10 bg-white rounded-xl shadow-lg  mt-8 mb-16 z-[0] relative m-auto">
+      <div className="w-full max-w-6xl p-2 lg:px-10 bg-white rounded-xl shadow-lg  mt-8 mb-4 lg:mb-16 z-[0] relative m-auto">
         <Disclosure.Group variant="boxed" className="mb-8">
           <Disclosure className="border-none cursor-none my-8">
-            <Disclosure.Button className="text-center text-mustard font-bold text-4xl ">
+            <Disclosure.Button className="text-center text-mustard font-bold text-[21px] lg:text-4xl ">
               Knowledge Base
             </Disclosure.Button>
           </Disclosure>

@@ -715,8 +715,6 @@ const main = () => {
                         zIndex={20}
                         openhandedfun={funtohandle}
                         forwhat="zipcode"
-                        enableZipcodeLookup={true}
-                        countryName={spotbooking?.destination_country}
                       />
                     </div>
                   </div>
@@ -746,14 +744,6 @@ const main = () => {
                         funtoempty={funtoempty4}
                         openhandedfun={funtohandle}
                         forwhat="city"
-                        enableZipcodeLookup={true}
-                        lookupType="city"
-                        countryName={spotbooking?.destination_country}
-                        lookupZipcode={
-                          spotbooking?.pincode_available == 1
-                            ? spotbooking?.destination_pincode
-                            : "0000"
-                        }
                       />
                     </div>
                   </div>
@@ -845,8 +835,6 @@ const main = () => {
                       zIndex={20}
                       openhandedfun={funtohandleimport}
                       forwhat="zipcode"
-                      enableZipcodeLookup={true}
-                      countryName={spotbooking?.origin_country}
                     />
                   </div>
                 </div>
@@ -878,14 +866,6 @@ const main = () => {
                       openhandedfun={funtohandleimport}
                       forwhat="city"
                       zIndex={20}
-                      enableZipcodeLookup={true}
-                      lookupType="city"
-                      countryName={spotbooking?.origin_country}
-                      lookupZipcode={
-                        spotbooking?.pincode_available == 1
-                          ? spotbooking?.origin_pincode
-                          : "0000"
-                      }
                     />
                   </div>
                 </div>

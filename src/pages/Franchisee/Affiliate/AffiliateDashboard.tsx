@@ -49,7 +49,7 @@ setAffiliateData(response?.data?.data);
 
 return (
   <div title="Affiliate Dashboard - sKart">
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-2 lg:p-4">
       <h1 className="text-[28px] font-bold text-[#2c3e50] mb-6">Dashboard</h1>
 
       {/* Stats Grid */}

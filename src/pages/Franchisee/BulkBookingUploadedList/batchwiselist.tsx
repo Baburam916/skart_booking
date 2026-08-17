@@ -193,7 +193,7 @@ const Batchwiselist = ({
       >
         <Lucide icon="ArrowLeft" className="w-4 h-4 stroke-2.5 text-mustard" />
       </div>
-      <div className="w-full max-w-8xl p-6 px-10 bg-white rounded-lg shadow-lg  mt-8 mb-16  z-[0] relative">
+      <div className="w-full max-w-8xl  p-3 px-2 lg:p-6 lg:px-10  bg-white rounded-lg shadow-lg  mt-8 mb-16  z-[0] relative">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 items-end gap-8">
           <h1 className="text-2xl font-bold text-left lg:whitespace-nowrap">
             BATCH No : {selectedBatch}

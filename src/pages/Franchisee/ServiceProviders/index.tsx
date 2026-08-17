@@ -32,7 +32,7 @@ const main = () => {
   }, []);
 
   return (
-    <div className="w-full max-w-8xl mx-auto mt-8 p-8 md:p-10 lg:p-12 mb-16 bg-white rounded-lg shadow-lg  z-[0] relative">
+    <div className="w-full max-w-8xl mx-auto mt-8 p-3 px-2 lg:p-6 lg:px-10  mb-16 bg-white rounded-lg shadow-lg  z-[0] relative">
       <h1 className="text-2xl font-bold ">Service Provider</h1>
       <div className="flex justify-center w-full mt-2 mb-4 border-t border-slate-200 dark:border-darkmode-400"></div>
 

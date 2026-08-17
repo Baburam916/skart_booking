@@ -116,12 +116,12 @@ export default function AffiliateStatement() {
   };
   return (
     <div title="Account Statement - sKart">
-      <div className=" mx-auto px-5 py-6">
+      <div className=" mx-auto px-0 lg:px-5 py-6">
         <h1 className="text-3xl font-bold text-gray-800 mb-6">
           Account Statement
         </h1>
 
-        <div className="bg-white shadow rounded-lg p-6">
+        <div className="bg-white shadow rounded-lg  p-2 lg:p-6">
           {/* Filters */}
           <div className="grid gap-4 mb-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
             <div>

@@ -1251,18 +1251,18 @@ const index = () => {
       <div className="mt-2  w-full py-3  px-3 bg-white rounded-lg shadow-lg">
         {invoiceData?.length > 0 ? (
           <div className="flex mb-2 gap-2 overflow-auto">
-            <div className="px-5 py-2 rounded-xl bg-blue-200 mt-1">
+            <div className="px-5 py-2 rounded-xl bg-blue-200 mt-1 wwhite whitespace-nowrap">
               ADDITIONAL
             </div>
 
-            <div className="px-5 py-2 rounded-xl bg-yellow-100 mt-1">
+            <div className="px-5 py-2 rounded-xl bg-yellow-100 mt-1 whitespace-nowrap">
               CREDIT NOTE
             </div>
 
-            <div className="px-5 py-2 rounded-xl bg-purple-200 mt-1">
+            <div className="px-5 py-2 rounded-xl bg-purple-200 mt-1 whitespace-nowrap">
               DEBIT NOTE
             </div>
-            <div className="px-5 py-2 rounded-xl bg-red-300 mt-1">VOID</div>
+            <div className="px-5 py-2 rounded-xl bg-red-300 mt-1 whitespace-nowrap">VOID</div>
           </div>
         ) : (
           <></>

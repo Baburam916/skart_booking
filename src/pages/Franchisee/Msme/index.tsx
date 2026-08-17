@@ -147,8 +147,8 @@ const main = () => {
       {showReg ? (
         <Registration setShowReg={setShowReg} handleGetData={handleGetData} />
       ) : (
-        <div className="w-full max-w-8xl p-6 px-10 bg-white rounded-lg shadow-lg  mt-8 mb-16 z-[0] relative">
-          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-3  items-end gap-8 w-full">
+        <div className="w-full max-w-8xl p-3 px-2 lg:p-6 lg:px-10 bg-white rounded-lg shadow-lg  mt-8 mb-16 z-[0] relative">
+          <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3  xl:grid-cols-3  items-end gap-2 lg:gap-8 w-full">
             <div className="w-full">
               <h1 className="text-2xl font-bold text-left whitespace-nowrap">
                 MSME List
@@ -179,19 +179,19 @@ const main = () => {
               </Button>
             </div>
 
-            <div className="flex w-full items-end">
+            <div className="block lg:flex w-full items-end">
               <FormInput
                 type="text"
                 placeholder="Enter Mobile No."
                 value={search}
-                className="w-2/3"
+                className="w-full lg:w-2/3"
                 onChange={(e) => {
                   setSearch(e.target.value.replace(/\s/g, ""));
                   setPage(1);
                 }}
               />
               <Button
-                className="w-1/3 rounded-lg bg-red-500 hover:bg-red-600 text-white ml-4"
+                className="w-full lg:w-1/3 rounded-lg bg-red-500 hover:bg-red-600 text-white lg:ml-4 mt-2 lg:mt-0"
                 onClick={() => {
                   setSearch("");
                   setPage(1);
